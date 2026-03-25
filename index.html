@@ -104,6 +104,7 @@ nav{position:fixed;top:0;left:0;right:0;height:64px;background:var(--bg);border-
 /* CASE STUDIES */
 .cs-header{background:var(--cream);background-image:radial-gradient(circle,rgba(30,51,40,0.13) 1px,transparent 1px);background-size:28px 28px;padding:var(--space-10) clamp(var(--space-9),6vw,var(--space-12)) var(--space-8);display:flex;align-items:flex-end;justify-content:space-between;gap:var(--space-7);}
 .cs-header-left{display:flex;flex-direction:column;gap:var(--space-2);}
+  .cs-header-inner{max-width:1300px;margin:0 auto;width:100%;display:flex;align-items:flex-end;justify-content:space-between;gap:var(--space-7);}
 .eyebrow{display:inline-flex;align-items:center;gap:var(--space-2);font-size:var(--text-xs);line-height:16px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange);}
 .eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--orange);flex-shrink:0;}
 .cs-title{font-family:'Playfair Display',serif;font-size:clamp(var(--text-2xl),4vw,var(--text-3xl));font-weight:900;font-style:italic;color:var(--dark);line-height:1;letter-spacing:-0.02em;}
@@ -428,7 +429,7 @@ body {
 <!-- CASE STUDIES -->
 <div id="work">
   <div class="cs-header reveal">
-    <div class="cs-header-left">
+    <div class="cs-header-inner">
       <div class="eyebrow"><span class="eyebrow-dot"></span>Selected Work</div>
       <h2 class="cs-title">Case Studies.</h2>
     </div>
