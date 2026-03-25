@@ -349,6 +349,32 @@ nav{position:fixed;top:0;left:0;right:0;height:64px;background:var(--bg);border-
 
 
 </style>
+  <style>
+/* Hide scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+</style>
+```
+
+So it will look like:
+```
+351    </style>
+       <style>
+       /* Hide scrollbar */
+       body::-webkit-scrollbar {
+         display: none;
+       }
+       body {
+         -ms-overflow-style: none;
+         scrollbar-width: none;
+       }
+       </style>
+352    </head>
 </head>
 <body>
 
