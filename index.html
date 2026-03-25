@@ -691,5 +691,13 @@ body {
   }
 }
 </style>
+  <script>
+  function updateHeight() {
+    const height = document.documentElement.scrollHeight;
+    window.parent.postMessage({ height: height }, '*');
+  }
+  window.addEventListener('load', updateHeight);
+  window.addEventListener('resize', updateHeight);
+</script>
 </body>
 </html>
