@@ -492,6 +492,41 @@ a{color:inherit}
 @media (max-width:640px){.hero-hook .ln{white-space:normal}}
 .hero-hook .ln+.ln{margin-top:.15em}
 .m-hook{color:var(--muted)}
+
+/* prototype link */
+.proto-btn{display:inline-flex;align-items:center;gap:10px;width:fit-content;background:var(--stage);color:var(--inverse);text-decoration:none;padding:15px 26px;border-radius:999px;font:600 13px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;transition:transform .3s var(--E),box-shadow .3s,background .3s}
+.proto-btn span{color:var(--lime);font-size:1.15em;transition:transform .3s var(--E)}
+.proto-btn:hover{background:#245a40;transform:translateY(-2px);box-shadow:0 10px 24px rgba(27,67,50,.25)}
+.proto-btn:hover span{transform:translate(2px,-2px)}
+.proto-btn:focus-visible{outline:3px solid var(--orange-text);outline-offset:3px}
+.proto-end{margin-top:clamp(56px,7vw,88px)}
+.proto-end+.coming{margin-top:clamp(40px,5vw,64px)}
+
+/* ── less-template labels ── */
+/* section eyebrows: gold coin (same as the app's habit coins) + sentence-case label */
+.eyebrow--coin{gap:12px;font:600 17px/1.2 var(--sans);letter-spacing:0;text-transform:none;color:var(--ink)}
+.eyebrow--coin::before,.eyebrow--plain::before{content:none!important;display:none!important}
+.coin-mark{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,#e1ba41 0 47%,#c19222 47% 100%);box-shadow:0 0 0 3px #fae27c,0 3px 8px rgba(89,59,13,.25);
+  font:700 13px/1 var(--sans);letter-spacing:-.01em;color:#113413}
+/* small plain labels */
+.eyebrow--plain{font:500 15px/1.4 var(--sans);letter-spacing:0;text-transform:none;color:var(--muted)}
+.label{font:600 15px/1.4 var(--sans)!important;letter-spacing:0!important;text-transform:none!important}
+.pays-label{color:var(--ink)!important}
+/* outcome line under each moment */
+.m-outcome{font:400 15px/1.5 var(--sans)!important;letter-spacing:0!important;text-transform:none!important}
+.m-outcome span{font-weight:600;margin-right:2px}
+.moments .m-outcome{color:rgba(250,243,232,.86)!important}
+.moments .m-outcome span{color:var(--lime)!important}
+
+/* keep big two-line headlines to exactly two lines on desktop */
+@media (min-width:900px){.h-display .ln{white-space:nowrap}.h-display{font-size:clamp(56px,7vw,104px)}}
+
+/* coin marker = the app's coin (Figma: Property 1=Coin) */
+.coin-mark{position:relative;display:inline-grid!important;place-items:center;width:44px!important;height:44px!important;background:none!important;box-shadow:none!important;border-radius:50%;
+  filter:drop-shadow(0 0 5px rgba(226,149,76,.55))}
+.coin-mark svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.coin-mark b{position:relative;font:600 15px/1 var(--sans);letter-spacing:-.01em;color:#133B13;transform:translateY(-1px)}
 </style>
 </head>
 <body>
@@ -500,7 +535,7 @@ a{color:inherit}
 <!-- ═════════════ HERO ═════════════ -->
 <section class="hero">
   <div class="hero-copy">
-    <div class="eyebrow reveal">Case study · Mobile app</div>
+    <div class="eyebrow eyebrow--plain reveal">Case study · Mobile app</div>
     <h1 class="hero-title reveal" style="--d:80ms">Balanceo<span>.</span></h1>
     <p class="hero-hook reveal" style="--d:160ms"><span class="ln">Wellness apps reward you after the habit.</span> <span class="ln">Balanceo makes you <em>pay for the reward first.</em></span></p>
     <div class="facts reveal" style="--d:240ms">
@@ -527,7 +562,7 @@ a{color:inherit}
 <section class="sec" id="problem">
   <div class="wrap">
     <div class="sec-head" data-io>
-      <div class="eyebrow">01 · The problem</div>
+      <div class="eyebrow eyebrow--coin"><span class="coin-mark" aria-hidden="true"><svg viewBox="0 0 62 62" aria-hidden="true"><circle cx="31" cy="30" r="27" fill="#CA9E28" stroke="#F9E8A3" stroke-width="6"/><path d="M31.9951 0C34.2939 0 36.5332 0.260078 38.6865 0.75L7.38477 49.3105C4.72476 45.6234 2.84683 41.3175 2.00098 36.6436L25.1094 0.792969C27.3222 0.273957 29.6272 2.20338e-05 31.9951 0Z" fill="#FFE76F" fill-opacity="0.5"/></svg><b>01</b></span><span>The problem</span></div>
       <h2 class="h-display words" data-words="Burnout doesn’t happen|in one bad week.">Burnout doesn’t happen in one bad week.</h2>
       <p class="lead reveal" data-io style="--d:300ms">It builds from every skipped lunch, every late clock-out and every evening lost to the couch.</p>
     </div>
@@ -581,7 +616,7 @@ a{color:inherit}
 <section class="sec sec--meet" id="solution">
   <div class="wrap">
     <div class="sec-head" data-io>
-      <div class="eyebrow">02 · The solution</div>
+      <div class="eyebrow eyebrow--coin"><span class="coin-mark" aria-hidden="true"><svg viewBox="0 0 62 62" aria-hidden="true"><circle cx="31" cy="30" r="27" fill="#CA9E28" stroke="#F9E8A3" stroke-width="6"/><path d="M31.9951 0C34.2939 0 36.5332 0.260078 38.6865 0.75L7.38477 49.3105C4.72476 45.6234 2.84683 41.3175 2.00098 36.6436L25.1094 0.792969C27.3222 0.273957 29.6272 2.20338e-05 31.9951 0Z" fill="#FFE76F" fill-opacity="0.5"/></svg><b>02</b></span><span>The solution</span></div>
       <h2 class="h-display words" data-words>Meet Balanceo.</h2>
       <p class="lead reveal" data-io style="--d:250ms">A habit app that holds your prepaid adventure until you finish the habits that prevent burnout. Three moments show how it works.</p>
     </div>
@@ -598,7 +633,7 @@ a{color:inherit}
           <p class="m-hook">Decide while you’re motivated, not when you’re tired.</p>
           <h3 class="m-title"><span class="ln">Book the</span> <span class="ln">reward first</span></h3>
           <ul class="m-bullets"><li>Goals built around your real week</li><li>Discounted spa days, getaways and classes</li><li>The ticket locks at $0 until habits earn it back</li></ul>
-          <p class="m-outcome"><span>Designed for</span>↑ Follow-through &nbsp;·&nbsp; ↑ Bookings</p>
+          <p class="m-outcome"><span>Built for</span>follow-through and bookings</p>
         </div>
       </article>
 
@@ -613,7 +648,7 @@ a{color:inherit}
           <p class="m-hook">People know what helps. They just don’t do it.</p>
           <h3 class="m-title"><span class="ln">Earn it back,</span> <span class="ln">one habit at a time</span></h3>
           <ul class="m-bullets"><li>Slide a coin to log it, with a photo or timer as proof</li><li>Every habit earns real money toward the trip</li><li>Skipped habits pay more, so the trip stays winnable</li></ul>
-          <p class="m-outcome"><span>Designed for</span>↑ Daily check-ins &nbsp;·&nbsp; ↑ Finished trips</p>
+          <p class="m-outcome"><span>Built for</span>daily check-ins and finished trips</p>
         </div>
       </article>
 
@@ -627,13 +662,16 @@ a{color:inherit}
           <p class="m-hook">Life happens.</p>
           <h3 class="m-title"><span class="ln">Finish strong,</span> <span class="ln">or step away fairly</span></h3>
           <ul class="m-bullets"><li>Keep going comes first, not the exit</li><li>Instant Unlock saves the ticket for $10</li><li>Encouraging copy beat “cheating” copy in an A/B test</li></ul>
-          <p class="m-outcome"><span>Designed for</span>↑ Trust &nbsp;·&nbsp; + $10 unlock revenue</p>
+          <p class="m-outcome"><span>Built for</span>trust, plus $10 unlock revenue</p>
         </div>
       </article>
     </div>
 
+    <div class="proto-end reveal" data-io>
+      <a class="proto-btn" href="https://www.figma.com/proto/ntten2t5DzGBV39Ef3bmLd/WLB-APP-V2?node-id=2977-21932&amp;t=e2HT46RJncPkofsK-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=2977%3A21873&amp;starting-point-node-id=2977%3A21932&amp;show-proto-sidebar=1" target="_blank" rel="noopener">Try the prototype <span aria-hidden="true">↗</span></a>
+    </div>
     <div class="coming reveal" data-io>
-      <div class="eyebrow">Coming soon</div>
+      <div class="eyebrow eyebrow--plain">Coming soon</div>
       <p class="coming-list"><span>Research</span><i>·</i><span>The economic model</span><i>·</i><span>What testing changed</span><i>·</i><span>What’s still unsolved</span></p>
     </div>
   </div>
